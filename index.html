@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Personal - Elias Agustin Vall</title>
+</head>
+<body bgcolor="#EBF5FB">
+
+    <!-- Encabezado con nombre y título -->
+    <center>
+        <h1>Elias Agustin Vall</h1>
+        <h2><u>El cielo es el límite, y el código mi herramienta</u></h2>
+    </center>
+    
+    <hr>
+
+    <!-- Sección de presentación con texto e imagen cambiable -->
+    <center>
+        <img id="foto-perfil" src="foto.jpg" alt="Foto personal de Elias Agustin Vall" width="220" height="auto" border="2">
+        <br><br>
+        <label for="selector-foto"><b>Cambiar foto de perfil:</b> </label>
+        <input type="file" id="selector-foto" accept="image/*">
+    </center>
+
+    <p>
+        Hola, me llamo <b>Elias Agustin Vall</b> y esta es mi página web personal. 
+        Soy un apasionado por la <i>aviación</i>, disfruto mucho de salir a <i>manejar autos</i> y me encuentro dando mis primeros pasos en el mundo de la <u>programación</u>. 
+        En mis tiempos libres me gusta sumergirme en una buena historia o disfrutar de una noche de películas de suspenso y terror.
+    </p>
+
+    <hr>
+
+    <!-- Lista de intereses o hobbies -->
+    <h3>Mis Intereses y Hobbies</h3>
+    <ul>
+        <li><b>Tecnología:</b> Aprender a programar y desarrollar páginas web[cite: 1].</li>
+        <li><b>Lectura:</b> Libros de aventuras y las Sagradas Escrituras[cite: 1].</li>
+        <li><b>Música:</b> Música pop (como <i>Marshmello</i>) y música electrónica (como <i>DJ David Guetta</i>)[cite: 1].</li>
+        <li><b>Idiomas:</b> Sé leer en inglés y sigo practicando para mejorar mi expresión oral[cite: 1].</li>
+        <li><b>Motores y Vuelo:</b> La aviación y manejar autos.</li>
+        <li><b>Cine:</b> Películas de terror.</li>
+    </ul>
+
+    <hr>
+
+    <!-- Enlaces a recursos externos -->
+    <h3>Enlaces Recomendados</h3>
+    <p>Te invito a visitar algunos sitios relacionados con mis intereses:</p>
+    <ul>
+        <li><a href="https://www.youtube.com/results?search_query=marshmello+david+guetta" target="_blank">Escuchar a Marshmello y David Guetta en YouTube</a></li>
+        <li><a href="https://www.bible.com/es" target="_blank">Leer las Sagradas Escrituras en línea</a></li>
+        <li><a href="https://www.flightradar24.com" target="_blank">Rastrear vuelos en vivo (Flightradar24)</a></li>
+    </ul>
+
+    <!-- Script para actualizar la imagen en tiempo real al seleccionar un archivo -->
+    <script>
+        const selector = document.getElementById('selector-foto');
+        const imagen = document.getElementById('foto-perfil');
+
+        selector.addEventListener('change', function(evento) {
+            const archivo = evento.target.files[0];
+            if (archivo) {
+                imagen.src = URL.createObjectURL(archivo);
+            }
+        });
+    </script>
+
+</body>
+</html>
